@@ -1,6 +1,7 @@
 node_modules/
 .vscode/
 package-lock.json
+.env
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
