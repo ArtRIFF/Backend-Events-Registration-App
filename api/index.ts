@@ -2,6 +2,7 @@ import { ObjectId } from "mongodb";
 import { TEventsCard, TParticipan } from "./types";
 
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const dotenv = require("dotenv");
 const { MongoClient } = require("mongodb");
@@ -46,6 +47,9 @@ async function getCardsByPage<T>(
     await client.close();
   }
 }
+
+app.use(cors());
+app.use(express.json());
 
 app.get(
   "/",
